@@ -1,1 +1,58 @@
+@import url("https://fonts.google.com/specimen/DM+Serif+Display");
+@import url("https://fonts.google.com/specimen/Karla");
 
+
+/* predefined */
+.root{
+  /* primary */
+  --clr-dark-violet: hsl(256, 26%, 20%);
+  --clr-grayish-blue: hsl(216, 30%, 68%);
+  /* neutral */
+  --clr-very-dark-violet: hsl(270, 9%, 17%);
+  --clr-dark-grayish-violet: hsl(273, 4%, 51%);
+  --clr-very-light-gray: hsl(0, 0%, 98%);
+}
+
+body{
+    font-size: 16px;
+    font-family: "Karla";
+    font-weight: 400 700;
+}
+header{
+    border: 1px solid red;
+    font-family: "DM Serif Display",sans-serif;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+}
+.header-center{
+    width: 80vw;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+
+}
+header ul{
+    border: 1px solid blue;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    width: 25em;
+    padding: 0px;
+}
+header button{
+    border: 2px solid black;
+    color: black;
+    background: white;
+    font-size: 16px;
+}
+.section-intro{
+    background-color: var(--clr-dark-violet);
+}
+.section-intro .div-center{
+    border: 1px solid yellow;
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
