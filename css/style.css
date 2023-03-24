@@ -11,16 +11,35 @@
   --clr-very-dark-violet: hsl(270, 9%, 17%);
   --clr-dark-grayish-violet: hsl(273, 4%, 51%);
   --clr-very-light-gray: hsl(0, 0%, 98%);
+
+  /* font */
+  --font-karla: 'Karla', sans-serif;
+  --font-DM-serif: "DM Serif Display", sans-serif;
 }
 
 body{
     font-size: 16px;
-    font-family: "Karla";
     font-weight: 400 700;
 }
+
+h1,
+h2,
+h3,
+h4{
+    font-family: var(--font-DM-serif);
+    /* font-family: "DM Serif Display", sans-serif; */
+}
+
+p{
+    font-family: 'Karla', sans-serif;
+
+}
+
+/* header */
+
 header{
     border: 1px solid red;
-    font-family: "DM Serif Display",sans-serif;
+    font-family: var(--font-karla);
     font-weight: 400;
     display: flex;
     justify-content: center;
@@ -29,8 +48,25 @@ header{
     width: 80vw;
     border: 1px solid black;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 
+}
+header .logo{
+    transform: scale(0.7);
+}
+ul{
+    margin: 0px;
+    padding: 0px;
+  }
+li{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    font-family: var(--font-karla);
+}
+a{
+    color: inherit;
+    text-decoration: none;
 }
 header ul{
     border: 1px solid blue;
@@ -38,21 +74,174 @@ header ul{
     display: flex;
     justify-content: space-between;
     width: 25em;
-    padding: 0px;
+    padding-left: 500px;
+}
+header ul li{
+    border: 1px solid black;
 }
 header button{
-    border: 2px solid black;
+    border: 1.5px solid black;
     color: black;
     background: white;
     font-size: 16px;
+    font-family: var(--font-karla);
 }
+
+/* section 1 */
+
 .section-intro{
-    background-color: var(--clr-dark-violet);
+    border: 1px solid green;
+    /* background: var(--clr-dark-violet); */
+    background: hsl(256, 26%, 20%);
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
 }
 .section-intro .div-center{
-    border: 1px solid yellow;
+    /* border: 1px solid orange; */
     width: 80vw;
     display: flex;
     justify-content: center;
+}
+.section-intro .div-center .div-img{
+    border: 1px solid blue;
+    width: 60%;
+}
+.section-intro .div-center .div-img img{
+    width: 70%;
+}
+.section-intro .div-texts{
+    /* width: 50%; */
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    /* padding-left: 40px; */
+    padding-top: 80px;
+    color: hsl(0, 0%, 98%);
+}
+.section-intro h1{
+    margin: 0px;
+    /* border: 1px solid black; */
+    font-size: 60px;
+    max-width: 80%;
+    line-height: 0.8em;
+}
+.section-intro p{
+    background: none;
+    margin: 0px;
+    padding-top: 30px;
+    max-width: 90%;
+    line-height: 1.5em;
+}
+.section-intro .div-button{
+    padding-top: 30px;
+}
+.section-intro button{
+    border: 1.5px solid hsl(0, 0%, 98%);
+    color: hsl(0, 0%, 98%);
+    background: hsl(256, 26%, 20%);
+    padding: 7px 20px 7px;
+    font-size: 12px;
+    font-family: var(--font-karla);
+}
+
+/* section 2 */
+.section-two{
+    border: 1px solid black;
+    padding-top: 100px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    /* width: 80vw; */
+}
+.section-two .div-center{
+    border: 1px solid blue;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+}
+.section-two .div-boxes{
+    display: flex;
+    padding-top: 50px;
+    column-gap: 2.5em;
+    justify-content: space-between;
+}
+.section-two .div-box{
+    width: 28%;
+}
+.section-two img{
+    transform: scale(0.7);
+}
+
+/* section 3 */
+.section-three{
+    background: white;
+    display: flex;
+    justify-content: center;
+    padding: 120px 0px 120px;
+}
+.section-three .div-center{
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+    background: hsl(256, 26%, 20%);
+    padding: 30px 0px 30px;
+}
+.section-three h1{
+    color: hsl(0, 0%, 98%);
+    padding-left: 80px;
+    font-size: 50px;
+    max-width: 35%;
+    line-height: 1em;
+    /* border: 1px solid white; */
+}
+.section-three .div-button{
+    padding-right: 120px;
+}
+.section-three .div-button button{
+    border: 1.5px solid hsl(0, 0%, 98%);
+    color: hsl(0, 0%, 98%);
+    background: hsl(256, 26%, 20%);
+    padding: 7px 20px 7px;
+    font-size: 12px;
+    font-family: var(--font-karla);
+}
+
+/* footer */
+footer{
+    background: hsl(0, 0%, 98%);
+    display: flex;
+    justify-content: center;
+    padding: 60px 0px 40px;
+}
+footer .div-center{
+    border: 1px solid black;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2em;
+}
+footer .div-top{
+    display: flex;
+    justify-content: space-between;
+}
+footer .div-plenty{
+    border: 1px solid green;
+    display: flex;
+    justify-content: space-between;
+}
+footer .div-column{
+    width: 25%;
+}
+footer ul{
+    display: flex;
+    flex-direction: column;
+}
+footer .head-footer-list{
+    font-weight: 400;
+    padding-bottom: 30px;
+}
+footer li{
+    padding-bottom: 10px;
 }
