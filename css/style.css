@@ -394,6 +394,9 @@ footer .div-top ul{
     align-items: center;
     column-gap: 0.6em;
 }
+footer .socials li a img:hover{
+    background: var(--clr-very-dark-violet);
+}
 footer .div-plenty{
     /* border: 1px solid green; */
     display: flex;
