@@ -142,14 +142,6 @@ header{
     display: flex;
     justify-content: space-between;
 }
-/* header .div-logo{
-    width: 8%;
-    display: flex;
-    align-items: center;
-    padding: 0;
-} */
-
-/* header .div-logo img{ */
 header .logo{
     width: 100%;
     display: flex;
@@ -159,26 +151,10 @@ a{
     color: inherit;
     text-decoration: none;
 }
-header .primary-navigation{
+.nav-list{
     display: flex;
-    column-gap: 3em;
+    gap: var(--size-600);
 }
-/* header .div-list{
-    display: flex;
-    justify-content: space-between;
-} */
-header ul{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    column-gap: 2em;
-}
-header ul li{
-    /* border: 1px solid black; */
-    font-size: 16px;
-}
-
-/* header .div-button button{ */
 header .nav-link-button{
     border: 1.7px solid var(--clr-very-dark-violet);
     color: var(--clr-very-dark-violet);
@@ -187,8 +163,6 @@ header .nav-link-button{
     font-weight: var(--fw-regular);
     font-size: 13px;
 }
-
-/* header .div-button button:hover{ */
 header .nav-link-button:hover{
     border: 1.7px solid var(--clr-very-light-gray);
     color: var(--clr-very-light-gray);
@@ -212,9 +186,48 @@ header .nav-link-button:hover{
     display: none;
 }
 @media (max-width: 50em) {
-    header .primary-navigation{
-        display: none;
+    header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 99999;
     }
+    .header-center{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .primary-navigation{
+        display: none;
+
+        position: fixed;
+        inset: 3.2rem 0;
+        background: var(--clr-very-dark-violet);
+        color: var(--clr-very-light-gray);
+        padding: var(--size-900);
+
+        background-image: url(../images/bg-pattern-mobile-nav.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: bottom;
+
+    }
+    .primary-navigation[data-visible]{
+        display: block;
+    }
+    .nav-list{
+        display: grid;
+        gap: var(--size-400);
+        text-align: center;
+        font-size: 30px;
+        gap: var(--size-600);
+    }
+    .nav-list a{
+        text-decoration: none;
+        color: var(--clr-very-light-gray);
+    }
+
     .mobile-nav-toggle{
         display: block;
         cursor: pointer;
@@ -225,6 +238,10 @@ header .nav-link-button:hover{
     .mobile-nav-toggle .icon-close{
         display: none;
     }
+}
+.opened{
+    display: block;
+    position: fixed;
 }
 
 .div-center{
